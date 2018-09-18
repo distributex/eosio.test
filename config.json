@@ -1,0 +1,7 @@
+{
+    "pub_key": "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+    "priv_key": "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3",
+    "nodeos": {
+        "endpoint": "http://localhost:8888"
+    }
+}
