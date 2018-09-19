@@ -16,8 +16,10 @@ it('tests hello contract', async (done) => {
   await contract.hi('test', {authorization: 'test'});
 
   await eosTest.destroy();
+  done();
+  // TODO: fix exit
   console.log(process._getActiveRequests());
   console.log(process._getActiveHandles());
-  done();
+  process.exit();
 }, 30000);
 
