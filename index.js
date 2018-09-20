@@ -28,6 +28,7 @@ class EOSEnv {
         --plugin eosio::chain_api_plugin \
         --plugin eosio::history_api_plugin \
         --max-irreversible-block-age ${2 ** 31 - 1} \
+        --contracts-console \
         --access-control-allow-origin "*" \
         --access-control-allow-headers "*" \
         --access-control-allow-credentials true \
