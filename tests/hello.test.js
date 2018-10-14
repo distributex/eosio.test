@@ -6,10 +6,7 @@ it('tests hello contract', async (done) => {
   await eosTest.init();
   console.log('build contract');
   await eosTest.make('./contracts/hello');
-  console.log('create test account');
-  await eosTest.newAccount('test');
-  console.log('create hello account');
-  await eosTest.newAccount('hello');
+  await eosTest.newAccount('test', 'hello');
   console.log('deploy contract');
   const contract = await eosTest.deploy('hello', '../contracts/hello/hello.wasm', '../contracts/hello/hello.abi');
   console.log('call contract methods');
@@ -17,9 +14,6 @@ it('tests hello contract', async (done) => {
 
   await eosTest.destroy();
   done();
-  // TODO: fix exit
-  console.log(process._getActiveRequests());
-  console.log(process._getActiveHandles());
-  process.exit();
+
 }, 30000);
 
